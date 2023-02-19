@@ -1,0 +1,5 @@
+<h1>Lista de usuarios:</h1>
+    <button routerLink="/dashboard">Back</button>
+    <ul>
+      <li *ngFor="let client of this.clients| keyvalue">{{ client.value.email }}</li>
+    </ul>
