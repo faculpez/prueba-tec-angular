@@ -19,7 +19,7 @@ Client.init({
     },
     phoneNumber: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
   }, { sequelize, modelName: 'client', timestamps: false })
 
