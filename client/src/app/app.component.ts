@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'client';
+  title: string = 'client';
+  changeName(){
+    if(this.title === 'client'){
+      this.title= 'facu'
+    }else{
+      this.title= 'client';
+    }
+  }
 }
