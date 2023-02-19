@@ -17,14 +17,10 @@ Client.init({
       type: DataTypes.STRING,
       allowNull: true
     },
-    phone: {
+    phoneNumber: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    password:{
-      type:DataTypes.STRING,
-      allowNull:false
-    }
   }, { sequelize, modelName: 'client', timestamps: false })
 
 export default Client;
