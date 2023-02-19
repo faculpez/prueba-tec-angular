@@ -20,13 +20,15 @@ export const loginUser = async(req,res) => {
     try {
         const { username, password } = req.body;
         const user = await User.findOne({where:{username, password}})
+        console.log(user);
         if(!user){
-            res.status(400).json({message:'Invalid username or password.'})
+            return res.status(400).json({message:'Invalid username or password.'})
         }
         const token = getToken(user.toJSON())
-        res.status(200).json({message:'login success',token})
+        return res.status(200).json({message:'login success',token})
     } catch (error) {
-        res.status(500).json({message: error.message})
+        console.error(error);
+        return res.status(500).send({message: error.message})
     }
 }
 const getToken = (userData) => {
