@@ -21,8 +21,8 @@ const httpOptions = {
 @Component({
   selector: 'app-my-component',
   template: `
-    <h1>Lista de usuarios:</h1>
-<button routerLink="/dashboard">Back</button>
+  <a routerLink="/dashboard">Home</a>
+    <h1>Clients:</h1>
 <table>
   <thead>
     <tr>
@@ -36,6 +36,7 @@ const httpOptions = {
       <td>{{ client.name }}</td>
       <td>{{ client.email }}</td>
       <td>{{ client.phoneNumber }}</td>
+      <td><button routerLink="/dashboard/clients/{{client.id}}"  >Phones</button></td>
     </tr>
   </tbody>
 </table>

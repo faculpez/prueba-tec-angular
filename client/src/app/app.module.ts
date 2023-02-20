@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashBoardComponent } from './components/dash-board/dash-board.component';
 import { ClientsComponent } from './components/clients/clients.component';
+import { PhonesComponent } from './components/phones/phones.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashBoardComponent,
-    ClientsComponent
+    ClientsComponent,
+    PhonesComponent
   ],
   imports: [
     BrowserModule,
