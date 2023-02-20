@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
-interface PhoneResponse {
-  phones: Phone[];
+interface FixResponse {
+  fixes: Fix[];
 }
 
-interface Phone {
+interface Fix {
   id: number;
   name: string;
   email: string;
@@ -28,35 +28,33 @@ const httpOptions = {
 <table>
   <thead>
     <tr>
-      <th>Model</th>
-      <th>Brand</th>
+      <th>Status</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let phone of phones">
-      <td>{{ phone.model }}</td>
-      <td>{{ phone.brand }}</td>
-      <td>{{ phone.client }}</td>
-      <button routerLink="/dashboard/phones/{{phone.id}}/" >Fixes</button>
+    <tr *ngFor="let fix of fixes">
+      <td>{{ fix.status }}</td>
+      <td><p>{{ fix.description }}</p></td>
     </tr>
   </tbody>
 </table>
   `
 })
 
-export class PhonesComponent implements OnInit {
-  phones: any[] = [];
-  idClient: string | null = null;
+export class FixesComponent implements OnInit {
+  fixes: any[] = [];
+  idPhone: string | null = null;
   
   
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
   
   ngOnInit() {
-    this.idClient = this.route.snapshot.paramMap.get('id');
-    this.http.get<PhoneResponse>(`http://localhost:4000/clients/${this.idClient}/phones`,httpOptions)
+    this.idPhone = this.route.snapshot.paramMap.get('id');
+    this.http.get<FixResponse>(`http://localhost:4000/phones/${this.idPhone}/fixes`,httpOptions)
     .subscribe(data => {
-      
-      this.phones = data.phones;
+      console.log(data);
+      this.fixes = data.fixes;
     });
     
   }
