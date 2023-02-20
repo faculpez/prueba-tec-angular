@@ -10,6 +10,7 @@ import { DashBoardComponent } from './components/dash-board/dash-board.component
 import { ClientsComponent } from './components/clients/clients.component';
 import { PhonesComponent } from './components/phones/phones.component';
 import { FixesComponent } from './components/fixes/fixes.component';
+import { FormClientComponent } from './components/form-client/form-client.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FixesComponent } from './components/fixes/fixes.component';
     DashBoardComponent,
     ClientsComponent,
     PhonesComponent,
-    FixesComponent
+    FixesComponent,
+    FormClientComponent,
   ],
   imports: [
     BrowserModule,

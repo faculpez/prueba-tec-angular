@@ -53,7 +53,6 @@ export class FixesComponent implements OnInit {
     this.idPhone = this.route.snapshot.paramMap.get('id');
     this.http.get<FixResponse>(`http://localhost:4000/phones/${this.idPhone}/fixes`,httpOptions)
     .subscribe(data => {
-      console.log(data);
       this.fixes = data.fixes;
     });
     
