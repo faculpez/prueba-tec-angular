@@ -11,6 +11,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { PhonesComponent } from './components/phones/phones.component';
 import { FixesComponent } from './components/fixes/fixes.component';
 import { FormClientComponent } from './components/form-client/form-client.component';
+import { FormPhoneComponent } from './components/form-phone/form-phone.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormClientComponent } from './components/form-client/form-client.compon
     PhonesComponent,
     FixesComponent,
     FormClientComponent,
+    FormPhoneComponent,
   ],
   imports: [
     BrowserModule,

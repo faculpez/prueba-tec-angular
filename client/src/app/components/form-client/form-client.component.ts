@@ -49,8 +49,6 @@ export class FormClientComponent {
         (error) => {
           console.error(error);
           alert('Invalid')
-          // Aquí podrías mostrar un mensaje de error al usuario
-          // si la petición no se completó correctamente.
         }
       );
       }
