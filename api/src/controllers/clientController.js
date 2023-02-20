@@ -12,11 +12,11 @@ export const getClients = async (req,res)=>{
 
 export const createClient = async(req,res) =>{
     try {
-        const {name, email, password} = req.body;
-        if(!name || !email || !password){
+        const {name, email, phoneNumber} = req.body;
+        if(!name || !email){
             return res.status(400).json({message:'Incomplete data'});
         }
-        const newClient = await Client.create({name, email, password})
+        const newClient = await Client.create({name, email, phoneNumber})
         return res.status(200).json({message: 'created client succesful'})
     } catch (error) {
         return res.status(500).json({message: error.message})
