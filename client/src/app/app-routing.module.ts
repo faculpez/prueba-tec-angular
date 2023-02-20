@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientsComponent } from './components/clients/clients.component';
 import { DashBoardComponent } from './components/dash-board/dash-board.component';
+import { FixComponent } from './components/fix/fix.component';
 import { FixesComponent } from './components/fixes/fixes.component';
 import { FormClientComponent } from './components/form-client/form-client.component';
 import { FormFixComponent } from './components/form-fix/form-fix.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'dashboard/newclient', component: FormClientComponent},
   { path: 'dashboard/newphone', component: FormPhoneComponent},
   { path: 'dashboard/newfix', component: FormFixComponent},
+  { path: 'dashboard/fixes', component: FixComponent},
 ];
 
 @NgModule({

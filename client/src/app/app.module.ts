@@ -13,6 +13,7 @@ import { FixesComponent } from './components/fixes/fixes.component';
 import { FormClientComponent } from './components/form-client/form-client.component';
 import { FormPhoneComponent } from './components/form-phone/form-phone.component';
 import { FormFixComponent } from './components/form-fix/form-fix.component';
+import { FixComponent } from './components/fix/fix.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FormFixComponent } from './components/form-fix/form-fix.component';
     FormClientComponent,
     FormPhoneComponent,
     FormFixComponent,
+    FixComponent,
   ],
   imports: [
     BrowserModule,
